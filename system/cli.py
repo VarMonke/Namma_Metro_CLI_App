@@ -134,6 +134,10 @@ class MetroCLI:
         if not path:
             print(f"Sorry, no route could be found from {start_station.name} to {end_station.name}.")
             return
+        
+        if start_station.name == path[1].name:
+                path.pop(0)
+                start_station = path[0]
 
         stops = len(path) - 1
         fare = stops * self.FARE_PER_STOP

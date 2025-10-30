@@ -98,6 +98,8 @@ class Ticket:
                 ROUTE_PADDING = " " * 4 
                 
                 start_station = self.path[0]
+
+
                 current_line = start_station.line
 
                 print(f"{ROUTE_PADDING}Start at {start_station.name} on the {format_ansi(current_line.upper(), text_color=current_line)} line.\n")
